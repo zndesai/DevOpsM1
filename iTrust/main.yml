@@ -1,0 +1,9 @@
+---
+- name: Deploying iTrust
+  hosts: 192.186.91.91
+  become: yes
+  roles:
+    - docker
+    - jdk
+    - mysql
+    - deployment

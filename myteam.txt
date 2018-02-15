@@ -1,0 +1,13 @@
+Team members: 
+1) Rutvij Mehta (rmehta4)
+2) Rushi Bhatt (rbhatt)
+3) Vignesh Nandakumar (vnandak)
+4) Zankruti Desai (zndesai)
+
+Contribution: 
+To ease the development process and reduce the errors, we adopted the pair-wise coding approach. 
+Team 1: Rushi Bhatt, Vignesh Nandakumar
+Tasks: Initial Jenkins configuration and automation, checkbox.io create/build job , Screencast 
+Team 2: Rutvij Mehta, Zankruti Desai
+Tasks:  Post-build task mechanism, iTrust create/build job, iTrust post build config, report generation 
+Entire team contributed in error solving/debugging and difficult tasks or deadlock situations.

@@ -1,0 +1,62 @@
+---
+- name: Move files
+  hosts: 192.168.33.80
+  tasks:
+    - copy:
+        src: /home/vagrant/mySync/checkboxio
+        dest: /home/vagrant/mySync/
+        
+    - name: Install Ansible
+      shell: sudo apt-add-repository ppa:ansible/ansible
+      become: true
+
+    - name: Install Ansible
+      shell: sudo apt-get update
+      become: true
+
+    - name: Install Ansible
+      shell: yes | sudo apt-get install ansible
+      become: true
+    - name: Install virtualbox
+      shell: yes | sudo apt-get install virtualbox
+      become: true
+      
+- name: Build Server  
+  hosts: 192.168.33.80
+  become: yes
+  vars:
+    jenkins_path: /var/lib/jenkins
+    jenkins_user: admin
+    jenkins_password: admin
+    jenkins_url: http://192.168.33.80:8080
+    jenkins_params:
+      url_username: "admin"
+      url_password: "admin"
+      url: "{{jenkins_url}}"
+      validate_certs: no
+    packages:
+       - npm
+       - debconf-utils
+       - git
+       - gcc
+       - make
+       - python-dev
+       - python-pip
+       - python-setuptools
+       - python-lxml
+       - vim
+       - libffi-dev
+       - libssl-dev
+       - libxml2-dev 
+       - libxslt1-dev 
+       - libjpeg8-dev 
+       - zlib1g-dev
+       
+  roles:
+    - mysql
+    - jenkins
+    
+
+
+  
+

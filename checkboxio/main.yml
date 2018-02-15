@@ -1,0 +1,15 @@
+---
+- name: Deploying checkbox.io
+  hosts: localhost
+  become: yes
+  roles:
+    - vagrant
+
+- name: Deploying checkbox.io
+  hosts: 192.186.90.90
+  become: yes
+  roles:
+    - node
+    - mongodb
+    - nginx
+    - deployment
